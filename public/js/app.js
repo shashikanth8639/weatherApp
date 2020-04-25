@@ -16,7 +16,8 @@ weatherForm.addEventListener('submit', (data)=>{
     msg1.textContent='Loading...'
     msg2.textContent=''
     // fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/alaska.json?access_token=pk.eyJ1Ijoic2hhc2hpa2FudGg4NjM5IiwiYSI6ImNrOTlzdTNsbTAxZGEzbnAzaGM0MW9xbzIifQ.aVKUtEf3GOxy-5JSPKqQYg')
-    fetch('http://localhost:3000/weather?address='+location)
+    // fetch('http://localhost:3000/weather?address='+location)
+    fetch('weather?address='+location) //To run on heroku
     .then(res=>res.json())
     .then(json=>{
         if(Object.keys(json).length==1){

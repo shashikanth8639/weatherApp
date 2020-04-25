@@ -13,6 +13,9 @@ const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 // console.log(htpath)
 
+//heroku port
+const port = process.env.PORT || 3000 //default for local
+
 //setting up handle bars
 //It should be in default src/views location but we can change it
 app.set('view engine','hbs')
@@ -105,6 +108,10 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000, () => {
+// app.listen(3000, () => {
+//     console.log("server started")
+// })
+
+app.listen(port, () => {
     console.log("server started")
 })
