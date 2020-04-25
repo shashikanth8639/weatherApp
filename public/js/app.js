@@ -13,7 +13,6 @@ const msg2 = document.getElementById('msg2')
 weatherForm.addEventListener('submit', (data)=>{
     data.preventDefault()
     const location = search.value
-    console.log(location)
     msg1.textContent='Loading...'
     msg2.textContent=''
     // fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/alaska.json?access_token=pk.eyJ1Ijoic2hhc2hpa2FudGg4NjM5IiwiYSI6ImNrOTlzdTNsbTAxZGEzbnAzaGM0MW9xbzIifQ.aVKUtEf3GOxy-5JSPKqQYg')
